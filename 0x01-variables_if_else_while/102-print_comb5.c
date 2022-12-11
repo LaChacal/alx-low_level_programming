@@ -1,47 +1,49 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
- * main - Entry point
- * 
+ * main - print pairs of double digit combos
+ *
  * Return: Always 0 (good)
  */
-
 int main(void)
 {
-	int c, i, k, j;
+	int i, j, k, m;
 
-	for (c = 48; c <= 57; c++)
+	i = 48;
+
+	while (i < 58)
 	{
-		for (i = 48; i <= 57; i++)
+		j = 48;
+
+		while (j < 58)
 		{
-			for (k = 48; k <= 57; k++)
+			m = j + 1;
+
+			k = i;
+
+			while (k < 58)
 			{
-				for (j = 48; j <= 57; j++)
+				while (m < 58)
 				{
-
-				if (((k + j) > (c + i) &&  k >= c) || c < k)
-				{
-					putchar(c);
 					putchar(i);
-					putchar(' ');
-					putchar(k);
 					putchar(j);
+					putchar(32);
+					putchar(k);
+					putchar(m);
+					if (i < 57 || j < 56 || k < 57 || m < 57)
+					{
+						putchar(44);
+						putchar(32);
+					}
+					m++;
+				}
+				m = 48;
 
-					if (c + i + k + j == 227 && c == 57)
-					{
-					break;
-					}
-					else
-					{
-					putchar(',');
-					putchar(' ');
-					}
-				}
-				}
+				k++;
 			}
+			j++;
 		}
+		i++;
 	}
-
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
