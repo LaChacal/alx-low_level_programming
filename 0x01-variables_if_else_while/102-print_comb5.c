@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 /**
- * main - print pairs of double digit combos
+ * main - Entry point
  *
  * Return: Always 0 (good)
  */
