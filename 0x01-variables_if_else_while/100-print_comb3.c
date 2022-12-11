@@ -3,13 +3,9 @@
 #include <unistd.h>
 
 /**
-
  * main - Entyr point
-
- * Description: prints two digits combination
-
+ *
  * Return: Always 0 (good)
-
  */
 
 int main(void)
